@@ -115,8 +115,8 @@ function createPersonalPage() {
       footer.innerHTML = `
         <p>© ${studentData.personalInfo.firstName} ${studentData.personalInfo.lastName}</p>
         <p>
-          <a href="mailto:${studentData.personalInfo.email}">Email</a> |
-          <a href="tel:${studentData.personalInfo.phone}">Phone</a>
+          <a href="${studentData.personalInfo.email}">Email</a> |
+          <a href="${studentData.personalInfo.phone}">Phone</a>
         </p>
       `;
       app.appendChild(footer);
