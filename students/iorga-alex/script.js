@@ -50,7 +50,7 @@ function createPersonalInfoSection() {
   // - Secțiune proiecte (carduri)
   // - Footer cu link-uri sociale
   
-  // Exemplu pentru header:
+  // ------------------------HEADER------------------------
   const header = document.createElement('header');
   header.className = 'hero';
   
@@ -66,7 +66,7 @@ function createPersonalInfoSection() {
   header.appendChild(name);
   app.appendChild(header);
   
-  // ... continuă cu restul secțiunilor
+  
 
 }
 
