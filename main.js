@@ -29,11 +29,15 @@ async function loadStudents() {
       link.href = `students/${student.folder}/index.html`;
       link.textContent = 'Vezi portofoliu →';
       link.className = 'portfolio-link';
+
+      const divider = document.createElement('p')
+      divider.innerHTML="----------------------------"
       
       card.appendChild(avatar);
       card.appendChild(name);
       card.appendChild(group);
       card.appendChild(link);
+      card.appendChild(divider);
       
       grid.appendChild(card);
     });
