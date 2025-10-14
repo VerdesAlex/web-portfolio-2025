@@ -70,7 +70,57 @@ function createPersonalInfoSection() {
   `;
   app.appendChild(personalInfoSection);
 
-    
+    //------------------------EDUCATION------------------------
+    const educationSection = document.createElement('section');
+    educationSection.className = 'education';
+    educationSection.innerHTML = `
+      <h2>Educație</h2>
+      <p><strong>Universitate:</strong> ${studentData.education.university}</p>
+      <p><strong>Facultate:</strong> ${studentData.education.faculty}</p>
+      <p><strong>An:</strong> ${studentData.education.year}</p>
+      <p><strong>Grupă:</strong> ${studentData.education.group}</p>
+    `;
+    app.appendChild(educationSection);
+
+    //------------------------SKILLS------------------------
+    const skillsSection = document.createElement('section');
+    skillsSection.className = 'skills';
+    skillsSection.innerHTML = `<h2>Competențe</h2>`;
+    studentData.skills.forEach(skill => {
+      const skillDiv = document.createElement('div');
+      skillDiv.className = 'skill';
+      skillDiv.innerHTML = `
+        <p><strong>${skill.name}</strong> (${skill.category})</p>
+        <div class="progress-bar">
+          <div class="progress" style="width: ${skill.level}%;"></div>
+        </div>
+      `;
+      skillsSection.appendChild(skillDiv);
+    });
+    app.appendChild(skillsSection);
+
+    //------------------------PROJECTS------------------------
+    const projectsSection = document.createElement('section');
+    projectsSection.className = 'projects';
+    projectsSection.innerHTML = `<h2>Proiecte</h2>`;
+    studentData.projects.forEach(project => {
+      const projectCard = document.createElement('div');
+      projectCard.className = 'project-card';
+      projectCard.innerHTML = `
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+        <p><strong>Tehnologii:</strong> ${project.technologies.join(', ')}</p>
+        <a href="${project.link}" target="_blank">Vezi proiectul</a>
+      `;
+      projectsSection.appendChild(projectCard);
+    });
+    app.appendChild(projectsSection);
+
+    //------------------------FOOTER------------------------
+    const footer = document.createElement('footer');
+    footer.className = 'footer';
+    footer.innerHTML = `<p>&copy; ${studentData.personalInfo.firstName} ${studentData.personalInfo.lastName}</p>`;
+  app.appendChild(footer);
 
 }
 
