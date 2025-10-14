@@ -132,15 +132,6 @@ function createPersonalPage() {
     const tech = document.createElement('p');
     tech.innerHTML = `<strong>Tehnologii:</strong> ${project.technologies.join(', ')}`;
 
-    const link = document.createElement('a');
-    link.href = project.link;
-    link.textContent = 'Vezi proiect';
-    link.target = '_blank';
-
-    // === EVENT LISTENER: click pe card ===
-    card.addEventListener('click', () => {
-      window.open(project.link, '_blank');
-    });
 
     card.appendChild(title);
     card.appendChild(desc);
@@ -148,8 +139,6 @@ function createPersonalPage() {
     card.appendChild(link);
     projectsSection.appendChild(card);
   });
-
-  app.appendChild(projectsSection);
 
   // === FOOTER ===
   const footer = document.createElement('footer');
