@@ -1,0 +1,148 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --text-color: #222;
+  --bg-color: #f8f9fa;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.hero h1 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+section {
+  background: #fff;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 350px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+h2, h3 {
+  font-size: 1.1em;
+  margin-bottom: 0.7em;
+  color: var(--primary-color);
+}
+
+.personal-section p,
+.education-section p {
+  margin-bottom: 0.5em;
+  font-size: 0.98em;
+}
+
+.skills-section h3 {
+  color: var(--secondary-color);
+}
+
+.skill {
+  margin-bottom: 1em;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 0.2em;
+  color: var(--primary-color);
+  font-size: 0.98em;
+}
+
+.projects-section h3 {
+  color: var(--primary-color);
+}
+
+.projects-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.project-card {
+  background: #f4f4f4;
+  border-radius: 6px;
+  padding: 0.7em;
+}
+
+.project-card h4 {
+  font-size: 1em;
+  margin-bottom: 0.3em;
+  color: var(--secondary-color);
+}
+
+.project-card p {
+  margin-bottom: 0.3em;
+  font-size: 0.95em;
+}
+
+.project-card a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-size: 0.95em;
+}
+
+.footer {
+  text-align: center;
+  padding: 1em 0 0.5em 0;
+  background: #fff;
+  font-size: 0.95em;
+  color: #888;
+  margin-top: 2em;
+  border-top: 1px solid #eee;
+}
+
+.social-links {
+  margin-bottom: 0.5em;
+}
+
+.social-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin: 0 0.5em;
+  font-size: 1em;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  section {
+    max-width: 600px;
+    padding: 1.5rem;
+  }
+  .avatar {
+    width: 160px;
+    height: 160px;
+  }
+  .projects-cards {
+    flex-direction: row;
+    gap: 1.5em;
+  }
+  .project-card {
+    flex: 1;
+    min-width: 200px;
+  }
+}
