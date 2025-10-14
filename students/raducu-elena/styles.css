@@ -1,0 +1,142 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #ac12f3;
+  --text-color: #333;
+  --bg-color: #f8f9fa;
+  --frontend-color: #e8f5ff;
+  --backend-color: #e8fff0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 1rem;
+}
+
+section {
+  background: white;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  margin-bottom: 0.5rem;
+}
+
+.skill {
+  margin: 0.7rem auto;
+  width: 80%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.skill:hover {
+  background-color: rgba(52, 152, 219, 0.08);
+}
+
+.skill-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.skill-name {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.cat {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.cat.Frontend {
+  background: var(--frontend-color);
+  border-color: #b5dcff;
+  color: #1366a1;
+}
+
+.cat.Backend {
+  background: var(--backend-color);
+  border-color: #a8f2c1;
+  color: #1b7b47;
+}
+
+.bar {
+  width: 100%;
+  background: #ddd;
+  height: 8px;
+  border-radius: 5px;
+  margin-top: 0.3rem;
+}
+
+.fill {
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+.highlight {
+  background-color: rgba(46, 204, 113, 0.15);
+  transition: 0.3s;
+}
+
+.project {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 0.5rem auto;
+  width: 80%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.project:hover {
+  background: #eef;
+}
+
+@media (max-width: 600px) {
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+  section {
+    margin: 0.5rem;
+    padding: 0.7rem;
+  }
+  .skill, .project {
+    width: 90%;
+  }
+}
