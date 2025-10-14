@@ -41,14 +41,7 @@ const studentData = {
 function createPersonalInfoSection() {
 
  const app = document.getElementById('app');
-  
-  // Creează elementele DOM dinamic:
-  // - Header cu avatar și nume
-  // - Secțiune informații personale
-  // - Secțiune educație
-  // - Secțiune skills (cu bare de progres)
-  // - Secțiune proiecte (carduri)
-  // - Footer cu link-uri sociale
+ 
   
   // ------------------------HEADER------------------------
   const header = document.createElement('header');
@@ -66,7 +59,18 @@ function createPersonalInfoSection() {
   header.appendChild(name);
   app.appendChild(header);
   
-  
+  //------------------------PERSONAL INFO------------------------
+  const personalInfoSection = document.createElement('section');
+  personalInfoSection.className = 'personal-info';
+  personalInfoSection.innerHTML = `
+    <h2>Informații Personale</h2>
+    <p><strong>Email:</strong> ${studentData.personalInfo.email}</p>
+    <p><strong>Telefon:</strong> ${studentData.personalInfo.phone}</p>
+    <p><strong>Data nașterii:</strong> ${studentData.personalInfo.birthDate}</p>
+  `;
+  app.appendChild(personalInfoSection);
+
+    
 
 }
 
