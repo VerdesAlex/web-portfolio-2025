@@ -102,8 +102,7 @@ function createPersonalPage() {
   sectionPersonalData.appendChild(street);
 
   const postalCode = document.createElement("p");
-  postalCode.textContent =
-    "Cod postal: " + studentData.personalInfo.address.street.codPostal;
+  postalCode.innerHTML = `<strong>Cod postal:</strong> ${studentData.personalInfo.address.street.codPostal}`;
   sectionPersonalData.appendChild(postalCode);
 
   const city = document.createElement("p");
