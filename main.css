@@ -1,67 +1,57 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f8f9fa;
-  color: #222;
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --text-color: #333;
+  --bg-color: #f8f9fa;
+}
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-header {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+}
+
+.hero {
   text-align: center;
-  padding: 2em 1em 1em 1em;
-  background: #3498db;
-  color: #fff;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
 }
 
-header h1 {
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-header p {
-  font-size: 1em;
+.personal-info {
+  margin-top: 1.5rem;
+  background-color: aquamarine;
 }
 
-#students-grid {
+.skills {
   display: flex;
-  flex-direction: column;
-  gap: 1em;
-  max-width: 350px;
-  margin: 2em auto;
+  color:blue;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
 }
 
-.portfolio-link {
-  display: block;
-  background: #fff;
-  color: #3498db;
-  text-decoration: none;
-  padding: 0.8em 1em;
-  border-radius: 6px;
-  border: 1px solid #eee;
-  text-align: center;
-  font-size: 1em;
-  transition: background 0.2s, color 0.2s;
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  color:chocolate
 }
 
-.portfolio-link:hover {
-  background: #3498db;
-  color: #fff;
-}
-
-footer {
-  text-align: center;
-  padding: 1em 0 0.5em 0;
-  background: #fff;
-  color: #888;
-  font-size: 0.95em;
-  margin-top: 2em;
-  border-top: 1px solid #eee;
-}
-
-@media (min-width: 600px) {
-  #students-grid {
-    flex-direction: row;
-    max-width: 700px;
-    gap: 2em;
-  }
-}
+/* ... restul stilurilor */
