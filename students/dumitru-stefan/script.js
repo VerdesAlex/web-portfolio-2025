@@ -2,9 +2,9 @@ const studentData = {
   personalInfo: {
     firstName: "Stefan",
     lastName: "Dumitru",
-    email: "stefan.dumitru@csie.ase.ro",
+    email: "stefan.dumitru@stud.ase.ro",
     phone: "+40 123 456 789",
-    birthdate: "15.03.2005"
+    birthdate: "15.03.2003"
   },
   education: {
     university: "BUS",
@@ -36,23 +36,25 @@ const studentData = {
 };
 
 function createPersonalPage() {
-  const app = document.getElementById('app');
-  
-  createHeader(app);
-
-  createPersonalInfoSection(app);
-
-  createEducationSection(app);
-
-  createSkillsSection(app);
-  createProjectsSection(app);
-
-
+  createHeader();
+  createPersonalInfoSection();
+  createEducationSection();
+  createSkillsSection();
+  createProjectsSection();
+  createFooter();
 }
 
-function createHeader(container) {
-  const header = document.createElement('header');
+function createFooter() {
+  const app = document.getElementById('app');
+  const footer = document.createElement('footer');
+  footer.className = 'footer';
+  footer.textContent = 'Instagram @stefandt21 | GitHub @stefandumitru | LinkedIn @stefandumitru';
+  app.appendChild(footer);
+}
 
+function createHeader() {
+  const app = document.getElementById('app');
+  const header = document.createElement('header');
   header.className = 'hero';
   
   const avatar = document.createElement('img');
@@ -61,22 +63,19 @@ function createHeader(container) {
   avatar.className = 'avatar';
   
   const name = document.createElement('h1');
-
   name.textContent = `${studentData.personalInfo.firstName} ${studentData.personalInfo.lastName}`;
   
   header.appendChild(avatar);
-
   header.appendChild(name);
-
-  container.appendChild(header);
+  app.appendChild(header);
 }
 
-function createPersonalInfoSection(container) {
+function createPersonalInfoSection() {
+  const app = document.getElementById('app');
   const section = document.createElement('section');
   section.className = 'section';
   
   const title = document.createElement('h2');
-
   title.textContent = 'Informații Personale'; 
   const email = document.createElement('p');
   email.innerHTML = `Email: ${studentData.personalInfo.email}`;
@@ -89,27 +88,22 @@ function createPersonalInfoSection(container) {
   section.appendChild(email);
   section.appendChild(phone);
   section.appendChild(birthdate);
-  container.appendChild(section);
+  app.appendChild(section);
 }
 
-function createEducationSection(container) {
+function createEducationSection() {
+  const app = document.getElementById('app');
   const section = document.createElement('section');
   section.className = 'section';
   
   const title = document.createElement('h2');
   title.textContent = 'Educație';
-  
   const university = document.createElement('p');
   university.textContent = `Universitate: ${studentData.education.university}`;
-  
   const faculty = document.createElement('p');
   faculty.textContent = `Facultate: ${studentData.education.faculty}`;
-  
   const year = document.createElement('p');
   year.textContent = `Anul: ${studentData.education.year}`;
-  
-
-
   const group = document.createElement('p');
   group.textContent = `Grupa: ${studentData.education.group}`;
   
@@ -118,10 +112,11 @@ function createEducationSection(container) {
   section.appendChild(faculty);
   section.appendChild(year);
   section.appendChild(group);
-  container.appendChild(section);
+  app.appendChild(section);
 }
 
-function createSkillsSection(container) {
+function createSkillsSection() {
+  const app = document.getElementById('app');
   const section = document.createElement('section');
   section.className = 'section';
   
@@ -138,10 +133,11 @@ function createSkillsSection(container) {
   
   section.appendChild(title);
   section.appendChild(skillsList);
-  container.appendChild(section);
+  app.appendChild(section);
 }
 
-function createProjectsSection(container) {
+function createProjectsSection() {
+  const app = document.getElementById('app');
   const section = document.createElement('section');
   section.className = 'section';
   
@@ -172,7 +168,7 @@ function createProjectsSection(container) {
   
   section.appendChild(title);
   section.appendChild(projectsList);
-  container.appendChild(section);
+  app.appendChild(section);
 }
 
 document.addEventListener('DOMContentLoaded', createPersonalPage);
