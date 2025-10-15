@@ -39,7 +39,7 @@ const studentData = {
       link: "https://github.com/VerdesAlex/Minecraft_Mod_Supers"
     }
   ],
-  avatar: "https://ui-avatars.com/api/?name=Alex+Verdes&size=200&background=random"
+  avatar: "https://ui-avatars.com/api/?name=Alex+Verdes&size=200&background=pink&color=white"
 };
 
 
